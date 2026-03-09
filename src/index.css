@@ -378,3 +378,62 @@ ul {
   align-items: center;
   justify-content: space-between;
 }
+
+/* Contact page layout helpers */
+.contact-grid {
+  align-items: flex-start;
+}
+
+.contact-form-card {
+  max-width: 560px;
+  margin-left: auto;
+}
+
+.contact-form-grid {
+  align-items: flex-start;
+}
+
+/* --- Responsive Tweaks --- */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .section {
+    padding: 4rem 0;
+  }
+
+  .grid-2,
+  .grid-3 {
+    gap: 1.5rem;
+  }
+
+  .contact-grid {
+    gap: 2.5rem;
+  }
+
+  .contact-form-card {
+    max-width: 100%;
+  }
+
+  .contact-form-grid {
+    grid-template-columns: 1fr !important;
+    row-gap: 1rem;
+  }
+
+  .blob-1,
+  .blob-2 {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 3rem 0;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+}
