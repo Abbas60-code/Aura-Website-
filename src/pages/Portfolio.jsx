@@ -43,10 +43,11 @@ const Portfolio = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true, margin: "-50px" }}
                                 transition={{ duration: 0.3, delay: index * 0.05 }}
-                                className="portfolio-card glass-panel relative overflow-hidden group"
-                                style={{ borderRadius: '24px', padding: 0 }}
+                                className="portfolio-card glass-panel"
+                                style={{ borderRadius: '24px', padding: 0, overflow: 'hidden' }}
                             >
-                                <div style={{ height: '300px', overflow: 'hidden' }}>
+                                {/* Image */}
+                                <div style={{ height: '240px', overflow: 'hidden', position: 'relative' }}>
                                     <img
                                         src={project.image}
                                         alt={project.title}
@@ -58,23 +59,23 @@ const Portfolio = () => {
                                         }}
                                         className="portfolio-image"
                                     />
-                                </div>
-
-                                {/* Hover overlay */}
-                                <div
-                                    className="portfolio-overlay absolute inset-0 flex flex-col justify-end p-6"
-                                    style={{
+                                    {/* Hover overlay — desktop only via CSS */}
+                                    <div className="portfolio-overlay" style={{
                                         background: 'linear-gradient(to top, rgba(10,10,10,0.9) 0%, transparent 100%)',
                                         position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
-                                        display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: '2rem',
+                                        display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: '1.5rem',
                                         opacity: 0, transition: 'opacity 0.3s ease'
-                                    }}
-                                >
-                                    <span className="text-gradient" style={{ fontWeight: 600, marginBottom: '0.25rem' }}>{project.category}</span>
-                                    <h3 style={{ fontSize: '1.75rem', fontWeight: 700, color: '#fff', marginBottom: '1rem' }}>{project.title}</h3>
-                                    <button className="btn-secondary" style={{ alignSelf: 'flex-start', padding: '0.5rem 1rem', borderRadius: '8px' }}>
-                                        View Project <ExternalLink size={16} style={{ marginLeft: '4px' }} />
-                                    </button>
+                                    }}>
+                                        <button className="btn-secondary" style={{ alignSelf: 'flex-start', padding: '0.5rem 1rem', borderRadius: '8px' }}>
+                                            View Project <ExternalLink size={16} style={{ marginLeft: '4px' }} />
+                                        </button>
+                                    </div>
+                                </div>
+
+                                {/* Always-visible info below image */}
+                                <div style={{ padding: '1.25rem 1.5rem' }}>
+                                    <span className="text-gradient" style={{ fontWeight: 600, fontSize: '0.85rem' }}>{project.category}</span>
+                                    <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginTop: '0.25rem', color: 'var(--text-primary)' }}>{project.title}</h3>
                                 </div>
 
                                 <style>{`

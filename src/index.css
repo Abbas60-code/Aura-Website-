@@ -88,6 +88,7 @@ ul {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 2rem;
+  width: 100%;
 }
 
 .section {
@@ -363,7 +364,7 @@ ul {
 
 .grid-3 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
 }
 
@@ -409,7 +410,7 @@ ul {
   }
 
   .contact-grid {
-    gap: 2.5rem;
+    gap: 2rem !important;
   }
 
   .contact-form-card {
@@ -423,19 +424,77 @@ ul {
 
   .blob-1,
   .blob-2 {
-    width: 260px;
-    height: 260px;
+    width: 220px;
+    height: 220px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .cta-box {
+    padding: 3rem 1.5rem !important;
+    border-radius: 20px;
   }
 }
 
 @media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
   .section {
     padding: 3rem 0;
   }
 
   .card {
-    padding: 1.5rem;
+    padding: 1.25rem;
+  }
+
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .glass-panel {
+    border-radius: 16px;
+  }
+
+  .heading-xl {
+    font-size: clamp(2.2rem, 8vw, 3rem);
+  }
+
+  .heading-lg {
+    font-size: clamp(1.75rem, 7vw, 2.5rem);
+  }
+
+  .heading-md {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  .cta-box {
+    padding: 2.5rem 1rem !important;
+    border-radius: 16px;
+  }
+
+  .blob-1,
+  .blob-2 {
+    width: 160px;
+    height: 160px;
   }
 }
 
+@media (max-width: 360px) {
+  .container {
+    padding: 0 0.75rem;
+  }
 
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}

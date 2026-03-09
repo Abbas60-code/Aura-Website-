@@ -37,7 +37,7 @@ const About = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2, duration: 0.4 }}
                         className="glass-panel"
-                        style={{ padding: '3rem', marginBottom: '4rem' }}
+                        style={{ padding: 'clamp(1.5rem, 4vw, 3rem)', marginBottom: '4rem' }}
                     >
                         <h2 className="heading-md mb-4 text-center">The Mission</h2>
                         <p className="text-secondary text-center" style={{ fontSize: '1.2rem', lineHeight: 1.8 }}>

@@ -2,6 +2,9 @@
     min-height: calc(100vh - 80px);
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 6rem 0 3rem;
 }
 
 .hero-badge {
@@ -47,14 +50,33 @@
     z-index: -1;
 }
 
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: auto;
+        padding: 7rem 0 3rem;
+    }
+}
+
 @media (max-width: 600px) {
     .hero-actions {
         flex-direction: column;
         width: 100%;
+        align-items: stretch;
     }
 
     .hero-actions .btn-primary,
     .hero-actions .btn-secondary {
         width: 100%;
+        justify-content: center;
+    }
+
+    .cta-box {
+        border-radius: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 5.5rem 0 2.5rem;
     }
 }

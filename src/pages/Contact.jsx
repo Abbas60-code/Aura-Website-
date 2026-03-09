@@ -81,7 +81,7 @@ const Contact = () => {
                         </Motion.p>
                     </div>
 
-                    <div className="contact-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem' }}>
+                    <div className="contact-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem' }}>
                         {/* Contact Info */}
                         <Motion.div
                             initial={{ opacity: 0, x: -50 }}
@@ -132,7 +132,7 @@ const Contact = () => {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.3, duration: 0.4 }}
                             className="glass-panel contact-form-card"
-                            style={{ padding: '3rem' }}
+                            style={{ padding: 'clamp(1.5rem, 4vw, 3rem)' }}
                         >
                             {success && (
                                 <div className="alert alert-success" style={{ marginBottom: '1rem' }}>
